@@ -1,16 +1,56 @@
-# React + Vite
+📦 SmartInventory AI
+Inventory Management with Market Intelligence
+SmartInventory is a full-stack dashboard designed to manage stock levels while using AI-driven market analysis. It helps businesses track products, monitor shortfalls, and stay updated with real-time economic news from the Indian market.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🚀 Features
+Real-time Dashboard: Track total nodes (products) and current stock shortfalls at a glance.
+Inventory Management: Seamlessly add new products and manage existing stock.
+AI Market News: Integration with NewsAPI to fetch the latest trends in the Indian retail and economy sectors.
+Dynamic Visuals: Clean, modern UI built with React and Tailwind CSS.
+FastAPI Backend: High-performance Python backend for database communication.
 
-Currently, two official plugins are available:
+🛠️ Tech Stack
+Frontend: React.js, Tailwind CSS, Lucide React (Icons).
+Backend: Python, FastAPI, Uvicorn.
+Database: Supabase (PostgreSQL).
+APIs: NewsAPI for market intelligence.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+📋 Installation & Setup
+1. Clone the Project
+Bash
+git clone <your-repo-link>
+cd "new project 2"
 
-## React Compiler
+2. Backend Setup
+Navigate to the backend folder: cd backend
+Create and activate a virtual environment:
+Bash
+python -m venv venv
+.\venv\Scripts\activate
+Install dependencies:
+Bash
+pip install fastapi uvicorn supabase pydantic requests
+Run the server:
+Bash
+python main.py
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+3. Frontend Setup
+Navigate to the project root and install dependencies:
+Bash
+npm install
+Start the development server:
+Bash
 
-## Expanding the ESLint configuration
+npm run dev
+⚙️ Environment Configuration
+Make sure your main.py (Backend) and your Supabase config (Frontend) include your specific credentials:
+Supabase URL: https://nlyvivelvwbzskefxxob.supabase.co
+Service Role Key: (Keep this private!)
+NewsAPI Key: Used for fetching economic data.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+🛡️ Database Policies (Current Configuration)
+The project currently uses Open Access Policies for rapid development. The following Row Level Security (RLS) rules are applied to the products table:
+Enable read access for all users
+Enable insert access for all users
+Enable update access for all users
+Enable delete access for all users
